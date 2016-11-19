@@ -76,17 +76,17 @@
 <div class="container marketing bg-white">
   <div class="row">
 
-    <div class="col-md-4" *ngFor="item in auctions"><!-- item -->
+    <div class="col-md-3" *ngFor="let item of auctions"><!-- item -->
       <div class="panel panel-default">
         <div class="panel-body">
             <p class="text-center">
-              <img class="img-circle" src="http://placehold.it/140x140" alt="Generic placeholder image" width="140" height="140">
+              <img class="" [src]="item.picture" alt="Generic placeholder image" width="140" height="140">
             </p>
-            <h4 class="text-center m-b-0">NOM PRODUIT</h4>
-            <h1 class="text-center bold m-t-0 m-b-0">15 €</h1>
+            <h4 class="text-center m-b-0">{{item.titre}}</h4>
+            <h4 class="text-center bold m-t-0 m-b-0">{{item.prix_min}} €</h4>
             <p class="text-center"><small>prix de départ</small></p>
 
-              <button type="button" class="btn btn-default btn-block">PARTICIPER</button>
+            <button type="button" class="btn btn-rounded btn-default btn-block">PARTICIPER</button>
 
         </div>
 

@@ -23,3 +23,8 @@
 .m-t-50 {margin-top: 50px !important;}
 /*****************************************/
 body{background-color: #e4f6fb;}
+/*****************************************/
+.btn-rounded{
+  -webkit-border-radius: 8px !important;
+  border-radius: 8px !important;
+}
