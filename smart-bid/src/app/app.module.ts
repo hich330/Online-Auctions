@@ -12,6 +12,7 @@ import { AppComponent }     from './app.component';
 import { HomeComponent }    from './public_user/home/home.compenent';
 import { HeaderComponent }  from './header.component';
 import { FooterComponent }  from './footer.component';
+import { SigninComponent }  from './public_user/signin/signin.component';
 //services
 import { AuctionService }  from './services/auction.service';
 
@@ -20,7 +21,8 @@ import { AuctionService }  from './services/auction.service';
     AppComponent,
     HomeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    SigninComponent
   ],
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [

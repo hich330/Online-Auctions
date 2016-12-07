@@ -21,10 +21,30 @@
 .m-t-40 {margin-top: 40px !important;}
 .m-t-45 {margin-top: 45px !important;}
 .m-t-50 {margin-top: 50px !important;}
+.m-t-100 {margin-top: 100px !important;}
+
+.p-t-50  {padding-top: 50px !important;}
+
+.m-l-0  {margin-left: 0 !important;}
+.m-l-5  {margin-left: 5px !important;}
+.m-l-10 {margin-left: 10px !important;}
+.m-l-15 {margin-left: 15px !important;}
+.m-l-20 {margin-left: 20px !important;}
+.m-l-25 {margin-left: 25px !important;}
+.m-l-30 {margin-left: 30px !important;}
+.m-l-35 {margin-left: 35px !important;}
+.m-l-40 {margin-left: 40px !important;}
+.m-l-45 {margin-left: 45px !important;}
+.m-l-50 {margin-left: 50px !important;}
+
+.fs-40{font-size: 40px !important;}
 /*****************************************/
-body{background-color: #e4f6fb;}
+body{
+  background-color: #e4f6fb;
+  color: #275663;
+}
 /*****************************************/
 .btn-rounded{
   -webkit-border-radius: 8px !important;
-  border-radius: 8px !important;
+  border-radius: 20px !important;
 }

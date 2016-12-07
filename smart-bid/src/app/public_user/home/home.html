@@ -70,7 +70,7 @@
 
 </div>
 
-
+<br>
 <!-- all items
 ================================================== -->
 <div class="container marketing bg-white">
@@ -78,18 +78,19 @@
 
     <div class="col-md-3" *ngFor="let item of auctions"><!-- item -->
       <div class="panel panel-default">
-        <div class="panel-body">
-            <p class="text-center">
-              <img class="" [src]="item.picture" alt="Generic placeholder image" width="140" height="140">
-            </p>
-            <h4 class="text-center m-b-0">{{item.titre}}</h4>
-            <h4 class="text-center bold m-t-0 m-b-0">{{item.prix_min}} €</h4>
-            <p class="text-center"><small>prix de départ</small></p>
-
-            <button type="button" class="btn btn-rounded btn-default btn-block">PARTICIPER</button>
+        <div class="panel-heading">{{item.titre}}</div>
+        <div class="panel-body text-center">
+          <div class="text-center">
+            <img class="img-thumbnail" [src]="item.picture" alt="Generic placeholder image" width="140" height="140">
+          </div>
+          <!--p style="max-height: 100px;min-height: 100px; overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p-->
+          <h4 class="bold m-t-10 m-b-0 fs-40">{{item.prix_min}} €</h4>
+          <small>prix de départ</small>
+          <br>
+          <br>
+          <button type="button" class="btn btn-sm btn-primary btn-block">PARTICIPER</button>
 
         </div>
-
       </div>
     </div><!-- end item -->
 
@@ -100,18 +101,19 @@
 
 <!-- Marketing messaging
 ================================================== -->
+<div class="bg-white m-t-50">
 <div class="container marketing">
   <!-- START THE FEATURETTES -->
 
-  <hr class="featurette-divider">
+
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
+      <h2 class="featurette-heading m-t-100">First featurette heading. <span class="text-muted">It'll blow your mind.</span></h2>
       <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500" alt="Generic placeholder image">
     </div>
   </div>
 
@@ -119,11 +121,11 @@
 
   <div class="row featurette">
     <div class="col-md-7 col-md-push-5">
-      <h2 class="featurette-heading">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
+      <h2 class="featurette-heading m-t-100">Oh yeah, it's that good. <span class="text-muted">See for yourself.</span></h2>
       <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5 col-md-pull-7">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500" alt="Generic placeholder image">
     </div>
   </div>
 
@@ -131,11 +133,11 @@
 
   <div class="row featurette">
     <div class="col-md-7">
-      <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
+      <h2 class="featurette-heading m-t-100">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
       <p class="lead">Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id ligula porta felis euismod semper. Praesent commodo cursus magna, vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus commodo.</p>
     </div>
     <div class="col-md-5">
-      <img class="featurette-image img-responsive center-block" data-src="holder.js/500x500/auto" alt="Generic placeholder image">
+      <img class="featurette-image img-responsive center-block" src="http://placehold.it/500x500" alt="Generic placeholder image">
     </div>
   </div>
 
@@ -144,3 +146,4 @@
   <!-- /END THE FEATURETTES -->
 
 </div><!-- /.container -->
+</div>
