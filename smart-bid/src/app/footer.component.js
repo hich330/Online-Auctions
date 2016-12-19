@@ -6,9 +6,25 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
 var core_1 = require('@angular/core');
+require('rxjs/add/operator/filter');
+var router_1 = require('@angular/router');
 var FooterComponent = (function () {
-    function FooterComponent() {
+    function FooterComponent(route, router) {
+        this.route = route;
+        this.router = router;
     }
+    FooterComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.router.events
+            .filter(function (event) { return event instanceof router_1.NavigationEnd; })
+            .subscribe(function (event) {
+            var currentRoute = _this.route.root;
+            while (currentRoute.children[0] !== undefined) {
+                currentRoute = currentRoute.children[0];
+            }
+            _this.path = currentRoute.snapshot.data;
+        });
+    };
     FooterComponent = __decorate([
         core_1.Component({
             selector: 'footer-cpt',

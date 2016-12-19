@@ -13,6 +13,7 @@ import { HomeComponent }    from './public_user/home/home.compenent';
 import { HeaderComponent }  from './header.component';
 import { FooterComponent }  from './footer.component';
 import { SigninComponent }  from './public_user/signin/signin.component';
+import { SignupComponent }  from './public_user/signup/signup.component';
 //services
 import { AuctionService }  from './services/auction.service';
 
@@ -22,7 +23,8 @@ import { AuctionService }  from './services/auction.service';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SigninComponent
+    SigninComponent,
+    SignupComponent
   ],
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [
