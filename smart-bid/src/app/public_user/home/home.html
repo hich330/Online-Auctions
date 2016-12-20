@@ -83,12 +83,11 @@
           <div class="text-center">
             <img class="img-thumbnail" [src]="item.picture" alt="Generic placeholder image" width="140" height="140">
           </div>
-          <!--p style="max-height: 100px;min-height: 100px; overflow: hidden;text-overflow: ellipsis;">{{item.description}}</p-->
           <h4 class="bold m-t-10 m-b-0 fs-40">{{item.prix_min}} €</h4>
           <small>prix de départ</small>
           <br>
           <br>
-          <button type="button" class="btn btn-sm btn-primary btn-block">PARTICIPER</button>
+          <a [routerLink]="['/auction']" class="btn btn-sm btn-primary btn-block" >PARTICIPER</a>
 
         </div>
       </div>

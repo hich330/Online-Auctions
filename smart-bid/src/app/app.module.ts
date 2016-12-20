@@ -14,6 +14,7 @@ import { HeaderComponent }  from './header.component';
 import { FooterComponent }  from './footer.component';
 import { SigninComponent }  from './public_user/signin/signin.component';
 import { SignupComponent }  from './public_user/signup/signup.component';
+import { AuctionComponent } from './public_user/auction/auction.component';
 //services
 import { AuctionService }  from './services/auction.service';
 
@@ -24,7 +25,8 @@ import { AuctionService }  from './services/auction.service';
     HeaderComponent,
     FooterComponent,
     SigninComponent,
-    SignupComponent
+    SignupComponent,
+    AuctionComponent
   ],
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [
