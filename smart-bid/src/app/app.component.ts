@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   "<router-outlet></router-outlet>" +
   "<footer-cpt></footer-cpt>"
 })
-export class AppComponent {}
+export class AppComponent {
+    
+}

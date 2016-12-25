@@ -17,6 +17,8 @@ import { SignupComponent }  from './public_user/signup/signup.component';
 import { AuctionComponent } from './public_user/auction/auction.component';
 //services
 import { AuctionService }  from './services/auction.service';
+//Global config
+import { Globals }  from './global';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,12 @@ import { AuctionService }  from './services/auction.service';
     FooterComponent,
     SigninComponent,
     SignupComponent,
-    AuctionComponent
+    AuctionComponent,
   ],
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [
     AuctionService,
+    Globals,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
   bootstrap: [AppComponent]

@@ -3,18 +3,22 @@ import { Component, OnInit} from '@angular/core';
 import 'rxjs/add/operator/filter';
 import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 
+import { Globals } from './global';
+
 @Component({
   selector: 'header-cpt',
   templateUrl: "./header.component.html"
 })
 export class HeaderComponent implements OnInit {
 
-  public path :any;
+  public path:any;
 
   constructor(
     private route: ActivatedRoute,
     private router: Router
-  ) { }
+  ) {
+
+  }
 
   ngOnInit() {
 
@@ -28,4 +32,6 @@ export class HeaderComponent implements OnInit {
         this.path = currentRoute.snapshot.data;
       })
   }
+
+
 }
