@@ -47,7 +47,11 @@ module.exports = {
      * userController.create()
      */
     create: function (req, res) {
-        var user = new userModel({			nom : req.body.nom,			prenom : req.body.prenom,			login : req.body.login,			password : req.body.password
+        var user = new userModel({
+			nom : req.body.nom,
+			prenom : req.body.prenom,
+			login : req.body.login,
+			password : req.body.password
         });
 
         user.save(function (err, user) {
@@ -79,7 +83,11 @@ module.exports = {
                 });
             }
 
-            user.nom = req.body.nom ? req.body.nom : user.nom;			user.prenom = req.body.prenom ? req.body.prenom : user.prenom;			user.login = req.body.login ? req.body.login : user.login;			user.password = req.body.password ? req.body.password : user.password;			
+            user.nom = req.body.nom ? req.body.nom : user.nom;
+			user.prenom = req.body.prenom ? req.body.prenom : user.prenom;
+			user.login = req.body.login ? req.body.login : user.login;
+			user.password = req.body.password ? req.body.password : user.password;
+			
             user.save(function (err, user) {
                 if (err) {
                     return res.status(500).json({
@@ -106,6 +114,30 @@ module.exports = {
                 });
             }
             return res.status(204).json();
+        });
+    },
+
+    /**
+     * userController.login()
+     */
+    login: function (req, res) {
+        var _login = req.body.login;
+        var _password = req.body.password;
+        userModel.find({login: _login}).exec(function (err, _user) {
+            if (err) {
+                return res.status(500).json({
+                    message: 'Error user not found.',
+                    error: err
+                });
+            }
+            if(_user.password == _password) {
+                return res.status(204).json(_user);
+            }else{
+                return res.status(500).json({
+                    message: 'Error password invalid.',
+                    error: err
+                });
+            }
         });
     }
 };

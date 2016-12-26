@@ -17,6 +17,7 @@ import { SignupComponent }  from './public_user/signup/signup.component';
 import { AuctionComponent } from './public_user/auction/auction.component';
 //services
 import { AuctionService }  from './services/auction.service';
+import { UserService }  from './services/user.service';
 //Global config
 import { Globals }  from './global';
 
@@ -33,6 +34,7 @@ import { Globals }  from './global';
   imports: [BrowserModule, FormsModule, HttpModule, routing],
   providers: [
     AuctionService,
+    UserService,
     Globals,
     {provide: LocationStrategy, useClass: HashLocationStrategy}
   ],
